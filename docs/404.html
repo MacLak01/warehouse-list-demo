@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Lista Magazynowa — WarehouseList" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="WarehouseList" />
+    <title>Lista Magazynowa — WarehouseList</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/warehouse-list-demo/assets/favicon-_uIbmbjq.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/warehouse-list-demo/assets/favicon-16x16-L4bauDWA.png" />
+    <link rel="icon" type="image/png" href="/warehouse-list-demo/assets/favicon-_uIbmbjq.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/warehouse-list-demo/assets/apple-touch-icon-C53mhSF5.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        var key = 'theme-mode';
+        var stored = localStorage.getItem(key);
+        var theme = stored === 'light' || stored === 'dark' ? stored : 'dark';
+        var palettes = {
+          light: {
+            bg: '#f8f9fa',
+            bg_secondary: '#e9ecef',
+            text: '#0a0a0a',
+            text_secondary: '#495057',
+            border: '#ced4da',
+            accent: '#ff4500',
+            success: '#10b981',
+            warning: '#f59e0b',
+            error: '#ef4444',
+            info: '#3b82f6',
+          },
+          dark: {
+            bg: '#050505',
+            bg_secondary: '#121212',
+            text: '#ffffff',
+            text_secondary: '#a3a3a3',
+            border: '#222222',
+            accent: '#ff4500',
+            success: '#00ff41',
+            warning: '#ffaa00',
+            error: '#ff0033',
+            info: '#00d2ff',
+          },
+        };
+        var p = palettes[theme];
+        var r = document.documentElement;
+        r.setAttribute('data-theme', theme);
+        r.classList.toggle('dark', theme === 'dark');
+        r.classList.toggle('light', theme === 'light');
+        r.style.setProperty('--color-bg', p.bg);
+        r.style.setProperty('--color-bg-secondary', p.bg_secondary);
+        r.style.setProperty('--color-text', p.text);
+        r.style.setProperty('--color-text-secondary', p.text_secondary);
+        r.style.setProperty('--color-border', p.border);
+        r.style.setProperty('--color-accent', p.accent);
+        r.style.setProperty('--color-success', p.success);
+        r.style.setProperty('--color-warning', p.warning);
+        r.style.setProperty('--color-error', p.error);
+        r.style.setProperty('--color-info', p.info);
+      })();
+    </script>
+    <script type="module" crossorigin src="/warehouse-list-demo/assets/index-BPaKLHa6.js"></script>
+    <link rel="stylesheet" crossorigin href="/warehouse-list-demo/assets/index-COJ3vaSn.css">
+  <link rel="manifest" href="/warehouse-list-demo/manifest.webmanifest"></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
